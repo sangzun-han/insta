@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    
+    <!--<link rel="stylesheet" href="{% static 'css/detail-page.css' %}">-->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_post.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'js/main.js' %}">
+    
+    {% block head%}
+    {% endblock %}
+
+    
+</head>
+<body>
+    <section id="contaioner">
+        <header id="header">
+            <section class="h_inner">
+                <h1 class="logo">
+                    <a href="{% url 'post:post_list' %}">
+                        <div class="sprite_insta_icon"></div>
+                        <div>
+                            <div class="sprite_write_logo"></div>
+                        </div>
+                    </a>
+                </h1>
+
+                <div class="search_field">
+                    <input type="text" placeholder="검색" tabindex="0">
+                    <div class="fake_field">
+                        <span class="sprite_small_search"></span>
+                        <span>검색</span>
+                    </div>
+                </div>
+
+                <div class="right_icons">
+                    <div class="sprite_camera_icon"><a href="{% url 'post:post_new' %}"></a></div>
+                    <div class="sprite_compass_icon"><a href="#"></a></div>
+                    <div class="sprite_heart_icon_outline"><a href="#"></a></div>
+                    {% if user.is_authenticated %}
+                    <div class="sprite_user_icon_outline"><a href="{% url 'post:my_post_list' user.username %}"></a></div>
+                    {% else %}
+                    <div class="sprite_user_icon_outline"><a href="{% url 'accounts:login' %}"></a></div>
+                    {% endif %}
+                </div>
+            </section>
+        </header>
+        
+        {% block content %}
+        {% endblock %}
+
+    </section>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>
