@@ -143,7 +143,7 @@ def post_edit(request, pk):
 
 @login_required
 def post_delete(request, pk):
-    post = get_object_or_404(Post,pk)
+    post = get_object_or_404(Post,pk=pk)
     if post.author != request.user or request.method == 'GET':
         messages.warning(request, '잘못된 접근입니다.')
         return redirect('post:post_list')
@@ -221,4 +221,4 @@ def comment_delete(request):
     else:
         message = '잘못된 접근입니다.'
         status = 0
-    return HttpResponse(json.dumps({'message': message, 'stauts': statuis}), content_type='application/json')
+    return HttpResponse(json.dumps({'message': message, 'status': status}), content_type='application/json')
