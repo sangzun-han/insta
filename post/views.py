@@ -220,3 +220,18 @@ def comment_delete(request):
         message = '잘못된 접근입니다.'
         status = 0
     return HttpResponse(json.dumps({'message': message, 'status': status}), content_type='application/json')
+
+@login_required
+def comment_new_detail(request):
+    pk = request.POST.get('pk')
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+            return render(request, 'post/comment_new_detail_ajax.html', {
+                'comment': comment,
+            })

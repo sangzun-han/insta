@@ -11,6 +11,7 @@ urlpatterns = [
     path('like',post.views.post_like, name='post_like'),
     path('bookmark',post.views.post_bookmark, name='post_bookmark'),
     path('comment/new', post.views.comment_new, name='comment_new'),
+    path('comment_detail/new', post.views.comment_new_detail, name='comment_new_detail'),
     path('comment/delete', post.views.comment_delete, name='comment_delete'),
     path('explore/tags/<tag>/', post.views.post_list, name='post_search'),
     path('<int:pk>',post.views.post_detail, name='post_detail'),
