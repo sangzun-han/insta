@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script type="text/javascript"> 
 
 (function(){
@@ -5,7 +6,7 @@
 
     function delegationFunc(e){
         let elem = e.target;
-
+ 
         while(!elem.getAttribute('data-name')){
             elem = elem.parentNode;
 

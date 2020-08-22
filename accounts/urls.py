@@ -1,6 +1,6 @@
 from django.urls import path
 import accounts.views
-
+from post.views import *
 app_name = 'accounts'
 
 urlpatterns = [
