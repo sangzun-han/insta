@@ -103,9 +103,8 @@
                         <div class="right_icon">
                             {% if user in post.bookmark_user_set.all %}
                             <div class="sprite_bookmark_outline on" name="{{ post.id }}" data-name="bookmark"></div>
-                            {% else}
+                            {% else %}
                             <div class="sprite_bookmark_outline" name="{{ post.id }}" data-name="bookmark"></div>
-   
                             {% endif %}
                         </div>
                     </div>
