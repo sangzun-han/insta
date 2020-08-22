@@ -143,6 +143,7 @@
                                 <div>{{comment.content}}</div>
                                 {% if user == comment.author %}
                                  <input type="button" class="del-comment" data-name="comment_delete" value="삭제" name="{{ comment.id }}">
+                                
                                 {% endif %}
                             </div>
                             {% endfor %}
@@ -155,13 +156,13 @@
                     <div class="comment_field" id="add-comment-post{{post.id}}">
                         {% if user.is_authenticated %}
                         {{ comment_form }}
-                        
+                    
                         <div class="upload_btn m_text" name="{{post.id}}" data-name="comment">게시</div>
                         {% else %}
                         {{ comment_form }}
                         
-                        <div class="upload_btn m_text" name="{{post.id}}" data-name="comment" onclick="alert('댓글을 작성하려면 로그인이 필요합니다')">게시</div>
-                        {% endif%}
+                        <div class="upload_btn m_text" onclick="alert('댓글을 작성하려면 로그인이 필요합니다')">게시</div>
+                        {% endif %}
                     </div>
                     
                 </article>
@@ -178,7 +179,7 @@
                     <div class="profile_thumb">
                         <img src="{{ user_profile.picture.url }}" alt="프로필사진">
                     </div>
-                    <div class="detail">
+                    <div class="detail">    
                         <div class="id m_text">{{ user_profile.user }}</div>
                         <div class="ko_name">{{ user_profile.nickname }}</div>
                     </div>

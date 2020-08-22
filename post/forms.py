@@ -14,6 +14,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['photo','content']
 
+
 class CommentForm(forms.ModelForm):
     content = forms.CharField(label='',widget=forms.TextInput(attrs={
         'class': 'comment-form',

@@ -204,9 +204,8 @@ def comment_new(request):
             comment.save()
             return render(request,'post/comment_new_ajax.html', {
                 'comment':comment,
-                
             })
-        return redirect('post_list')
+        return redirect('post:post_list')
             
             
 @login_required
@@ -217,7 +216,6 @@ def comment_delete(request):
         comment.delete()
         message = '삭제완료'
         status = 1
-    
     else:
         message = '잘못된 접근입니다.'
         status = 0

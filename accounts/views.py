@@ -35,7 +35,6 @@ def login_check(request):
             return redirect('/')
         else:
             return render(request, 'accounts/login_fail.html')
-        
     else:
         form = LoginForm()
         return render(request, 'accounts/login.html',{'form' : form})
