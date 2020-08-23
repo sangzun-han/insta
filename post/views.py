@@ -130,15 +130,15 @@ def post_edit(request, pk):
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
-            #post.tag_set.clear()
-            #post.tag_save()
+            post.tag_set.clear()
+            post.tag_save()
             messages.success(request, '수정완료')
             return redirect('post:post_list')
-        else:
-            form = PostForm(instance=post)
-        return render(request, 'post/post_edit.html',{
-            'post':post,
-            'form':form
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'post/post_edit.html',{
+        'post':post,
+        'form':form
         })
 
 @login_required
