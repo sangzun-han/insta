@@ -3,7 +3,6 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/new_post.css' %}">
-
 {% endblock %}
 
 {% block content %}
@@ -35,10 +34,11 @@
     </div>
 </div>
 
+
 <script>
 var fileInput= document.querySelector("#id_photo")
-fileInput.addEventListener('change',handleImage);
-var canvas = document.getElementByID('imageCanvas')
+fileInput.addEventListener('change', handleImage);
+var canvas = document.getElementById('imageCanvas')
 var ctx = canvas.getContext('2d');
 
 
