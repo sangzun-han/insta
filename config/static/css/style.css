@@ -353,6 +353,10 @@ body{
     margin-right: 10px;
     cursor:pointer;
 }
+.contents .bottom_icons .left_icons > a{
+    margin-right: 10px;
+    cursor:pointer;
+}
 
 .contents .bottom_icons .right_icon > div{
     cursor: pointer;

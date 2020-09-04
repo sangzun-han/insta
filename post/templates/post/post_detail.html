@@ -104,12 +104,10 @@
                         <div class="count_likes">
                             
                             <span id="like-count-{{ post.id }}" class="count">좋아요{{ post.like_count }}개</span>
-                            <span id="bookmark-count-{{ post.id }}" >북마크{{ post.bookmark_count }}개</span>
                             
                         </div>
                         
                         <div class="timer">{{ post.created_at|timesince }}</div>
-                        <div class="content">{{ post|add_link|safe|linebreaksbr }}</div>
                         
 
                         <div class="comment_field" id="add-comment-post{{post.id}}">
