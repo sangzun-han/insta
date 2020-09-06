@@ -52,15 +52,15 @@ def follow(request):
     follow, created = Follow.objects.get_or_create(from_user=from_user, to_user=to_user)
 
     if created:
-        message = '팔로우 시작'
+        messages = '팔로우 시작'
         status = 1
     else:
         follow.delete()
-        message = '팔로우 취소'
+        messages = '팔로우 취소'
         status = 0
 
     context = {
-        'message': message,
+        'messages': messages,
         'status': status
     }
     return HttpResponse(json.dumps(context),content_type='application/json')
