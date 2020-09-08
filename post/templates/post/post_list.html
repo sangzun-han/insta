@@ -221,10 +221,10 @@
                         <div>회원님을 위한 추천</div>
                         <div class="more">모두 보기</div>
                     </header>
-                    {% for post in posts|slice:"2:3" %}
+                    {% for post in posts|slice:"1:2" %}
                     <div class="thumb_user">
                         <div class="profile_thumb">
-                            <img src="{{ post.photo.url }}" alt="프로필사진">
+                            <img src="{{ post.author.profile.picture.url }}" alt="프로필사진">
                         </div>
                         <div class="detail">
                             <div class="id">{{ post.content }}</div>
