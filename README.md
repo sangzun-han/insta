@@ -1,22 +1,33 @@
-![메인페이지](https://t1.daumcdn.net/cfile/tistory/999A043D5F55698A11)
- 
+# 🚀 Info
 
-## 2020.09.97
+- 개발환경
+  - OS : Windows10
+  - html,css,js,ajax,python,django
 
-기능
-<hr>
+# 📝 How To Use
 
-1.회원가입 / 로그인 / 로그아웃
+```
+1. python -m venv 'name'
+2. source 'name'/scripts/activate
+3. pip install -r requirements.txt
+4. python manage.py makemigrations
+5. python manage.py migrate
+6. python manage.py runserver
+```
 
+# Main Features
 
-2.글쓰기 / 글수정 / 글삭제
+- SIGNUP / LOGIN
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/57563053/103122220-b63d4300-46c2-11eb-885b-6b893de99173.gif">
 
-3.좋아요 / 북마크
+- Upload Post
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/57563053/103122219-b5a4ac80-46c2-11eb-8c1a-360f2dae5ea1.gif">
 
-4.팔로우
+- Follow / Following
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/57563053/103122215-b50c1600-46c2-11eb-8026-23b33dcfda93.gif">
 
-5.마이페이지
+- Like / BookMark
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/57563053/103122217-b5a4ac80-46c2-11eb-9c29-8180bb6faabe.gif">
 
-6.태그검색
-
-
+- Search Tag
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/57563053/103122211-b3dae900-46c2-11eb-9126-e04fb29c9fb5.gif">
