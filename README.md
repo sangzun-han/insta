@@ -15,6 +15,14 @@
 6. python manage.py runserver
 ```
 
+# 🎈 Deploy
+
+```
+https://stargram-clone.herokuapp.com/post/
+```
+
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/57563053/103215051-8d80ac00-4955-11eb-95ba-7d9ea2dfe652.png">
+
 # Main Features
 
 - SIGNUP / LOGIN
