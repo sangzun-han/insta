@@ -1,1 +1,7 @@
 {% extends 'layout.html' %}
+<script defer>
+    const http = require("https");
+    setInterval(function () {
+    http.get("https://stargram-clone.herokuapp.com/post/");
+    }, 600000); // every 10 minutes
+</script>
