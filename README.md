@@ -1,9 +1,3 @@
-# 🚀 Info
-
-- 개발환경
-  - OS : Windows10
-  - html,css,js,ajax,python,django
-
 # 📝 How To Use
 
 ```
